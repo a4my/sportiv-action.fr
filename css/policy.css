@@ -1,0 +1,287 @@
+/*----------------------------------------------*/
+/*---------------GENERAL SETUP------------------*/
+/*----------------------------------------------*/
+
+/* theme color: #1abc9c */
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+/*---- only if you need to get rid of the outline on each element---*/
+*:focus {
+    Outline:none;
+}
+
+html {
+    background-color: #fff;
+    color: #555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-size: 20px
+    font-weight: 300;
+    text-rendering: optimizeLegibility
+}
+
+/* --Add the class on the parent element to clear the float -----*/
+.clearfix {
+    zoom: 1;
+}
+.clearfix:after {
+    content: " ";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+
+/*----------------------------------------------*/
+/*---------------REUSABLE COMPONENTS------------*/
+/*----------------------------------------------*/
+.row {
+  max-width: 1140px;
+  margin: auto;
+  }
+
+section {
+  margin-top: 50px;
+}
+
+
+/* -----HEADINGS----------*/
+h1,
+h2,
+h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+     text-align: center;
+    }
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 240%;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+}
+
+h2 {
+   font-size: 180%;
+   word-spacing: 2px;
+   text-align: center;
+   margin-bottom: 30px;
+   letter-spacing: 1px;
+}
+
+h3 {
+   font-size: 110%;
+    margin-bottom: 15px;
+}
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #1abc9c;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+p {
+  text-align: center;
+  margin: 0 33%;
+}
+
+
+
+/*------ICONS---------*/
+.icon-big {
+    font-size: 350%;
+    display: block;
+    color: #1abc9c;
+    margin-bottom: 10px;
+}
+
+.icon-small, .icon-medium {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    color: #1abc9c;
+    font-size: 120%;
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -5px;
+}
+
+.icon-small {
+    margin-right: 10px;
+}
+
+/*-------LINKS----------*/
+
+a:link,
+a:visited {
+    color: #1abc9c;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #1abc9c;
+    transition: border-bottom 0.2s, color 0.2s;
+}
+
+a:hover,
+a:active {
+    color: #555;
+    border-bottom: 1px solid transparent;
+}
+
+
+
+/*----------------------------------------------*/
+/*----------------------HEADER------------------*/
+/*----------------------------------------------*/
+header {
+    background-color: #111;
+    opacity: 0.8;
+    background-attachment: fixed;
+    height: 180px;
+    padding-top: 20px;
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 40px;
+    }
+
+.logo {
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+    }
+
+/* Main navi */
+.main-nav {
+    float: right;
+    list-style-type: none;
+    margin-top: 60px;
+    }
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+}
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding:  8px 0;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #1abc9c;
+}
+
+/* Sticky navi */
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 2px #efefef;
+    z-index: 9999;
+}
+
+.sticky .main-nav {margin-top: 18px;}
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+    padding:  16px 0;
+    color: #555;
+}
+
+.sticky .logo {display: none;}
+.sticky .logo-black { display: block;}
+
+
+/* ----------------------------*/
+/* ----------------------------*/
+/* FOOTER*/
+/* ----------------------------*/
+
+footer {
+    background-color: #333;
+    padding: 50px;
+    font-size: 80%;
+}
+
+.footer-nav {
+    list-style:none;
+    float: left;
+}
+
+.social-links {
+    list-style:none;
+    float: right;
+}
+
+.footer-nav li,
+.social-links li {
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: -15px;
+    font-size: 140%;
+    }
+
+.footer-nav li:last-child,
+.social-links li:last-child {
+    margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+    text-decoration: none;
+    border: 0;
+    color: #888;
+
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+    color: #ddd;
+    border-bottom: 2px solid #1abc9c;
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+    font-size: 160%;
+}
+
+.ion-social-facebook {
+    transition: color 0.2s;
+    font-size: 120%;
+}
+
+.ion-social-facebook:hover {
+    color:#3b5998;
+}
+
+
+footer p {
+    color: #888;
+    text-align: center;
+    margin-top: 20px;
+}
